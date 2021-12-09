@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .button {
+            color: white;
+            background: purple;
+        }
+        /*Đặt thuộc tính cho 1 phần tử nhất đinh*/
+    </style>
+    <meta charset="UTF-8">
+    <title>Convert_Currency</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th style="width: 200px" align="left">From Currency</th>
+            <th style="width: 100px" align="left">To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" style="width:70%" id="currency"/>
+            </td>
+            <td>
+                <select>
+                    <option value="VND">VND</option>
+                    <option value="JYP">JYP</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                <option value="USD">USD</option>
+                <option value="YEN">YEN</option>
+                <option value="EUR">EUR</option>
+            </select>
+            </td>
+            <td>
+                <button type="button" onclick="convert()" class="button">Convert</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<p id="showResult" style="color: blue">Result: </p>
+<script>
+        function convert(){
+            let number = document.getElementById("currency").value;
+            let result = number / 22800.0;
+            document.getElementById("showResult").innerText = 'Result ' + result;
+        }
+
+
+</script>
+</body>
+</html>
